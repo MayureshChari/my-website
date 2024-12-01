@@ -1,0 +1,134 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-image: url('/Users/user/Documents/Damodar Competions Documentations/Photos/Wallpaper.jpg'); /* Replace 'your-image-path.jpg' with the actual image path */
+    background-size: cover; /* Ensures the image covers the entire viewport */
+    background-position: center; /* Centers the background image */
+    background-attachment: fixed; /* Keeps the background fixed when scrolling */
+    color: #000000; /* Default text color for readability */
+}
+.white-label-p {
+    color: rgb(0, 0, 0);
+    text-shadow: -1.5px -1.5px 0 rgb(255, 255, 255), 1px -1px 0 rgb(255, 255, 255), -1px 1px 0 rgb(255, 255, 255), 1px 1px 0 rgb(255, 255, 255);
+    font-weight: bold; /* Corrected property */
+    font-size: larger;
+    text-align: center;
+  }
+  
+h1 {
+    text-align: center;
+    margin-bottom: 20px; /* Optional: Add space below the heading */
+}
+
+.competitions-container {
+    display: flex;
+    flex-wrap: wrap; /* Ensures competitions wrap to the next row if space is insufficient */
+    gap: 20px; /* Space between competitions */
+    justify-content: space-evenly; /* Distributes competitions evenly */
+}
+
+.competition {
+    flex: 1 1 calc(33.33% - 20px); /* Three competitions per row */
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 15px;
+    background-color: #ffffff; /* White background */
+    box-sizing: border-box;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for competition cards */
+    transition: transform 0.2s, box-shadow 0.2s; /* Animation for hover effect */
+}
+
+.competition:hover {
+    transform: translateY(-5px); /* Slight lift on hover */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+}
+
+.competition h3 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.competition p, 
+.competition ul {
+    color: #666;
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+.competition ul li {
+    margin-left: 20px;
+}
+
+
+@media (max-width: 768px) {
+    .competition {
+        flex: 1 1 calc(50% - 20px); /* On smaller screens, switch to two competitions per row */
+    }
+}
+
+@media (max-width: 480px) {
+    .competition {
+        flex: 1 1 100%; /* On very small screens, switch to one competition per row */
+    }
+}
+
+.competition h3 {
+    margin-top: 0;
+}
+
+
+.btn {
+    display: inline-block;
+    padding: 10px 15px;
+    margin: 5px 5px 0 0;
+    text-decoration: none;
+    border: 1px solid #007BFF;
+    border-radius: 5px;
+    color: #fff;
+    background-color: #007BFF;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.btn:disabled {
+    background-color: #ccc;
+    border-color: #ccc;
+    cursor: not-allowed;
+}
+
+.btn:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Adds a slight shadow */
+}
+
+#popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 2px solid #ff5e00;
+    border-radius: 10px;
+    background-color: #dda87d;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    display: none;
+    max-width: 90%; /* Ensures it looks good on smaller screens */
+    max-height: 90%;
+    overflow: auto;
+}
+
+#popup img {
+    max-width: 100%;
+    max-height: 300px;
+}
+
+#close-popup {
+    display: block;
+    margin: 10px auto 0;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ff7b00;
+    color: #fff;
+    cursor: pointer;
+}
